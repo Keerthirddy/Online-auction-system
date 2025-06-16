@@ -1,2 +1,1 @@
-"This is my dev branch notes" 
-"rugved is here"
+"This is my dev branch notes"
