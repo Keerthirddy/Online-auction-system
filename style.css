@@ -139,15 +139,6 @@
             transform: translateY(-2px);
             color: white;
         }
-
-        .footer-bottom {
-            border-top: 1px solid #333;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            text-align: center;
-            color: #999;
-        }
-
         /* Demo content */
         .demo-content {
             margin-top: 80px;
