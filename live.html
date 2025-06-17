@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Auctions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+   <link rel="stylesheet" href="stylelive.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    
+    body {
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+      min-height: 100vh;
+      padding: 2rem 0;
+    }
+    .auction-card {
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .btn-gradient {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      color: white;
+      border-radius: 25px;
+      padding: 0.5rem 1.5rem;
+    }
+    .timer-text {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .live-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+    /*.navbar-custom {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+         .footer-custom {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }*/
+
+    /*.img-container{
+      display:flex;
+      justify-content:center;
+
+      
+    }*/
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🏆 AuctionHub</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="live.html">Auctions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-custom-secondary">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  <!--<div class="img-container">
+    <img src="https://dinarys.com/photos/7/Online-Antique-Auction-websites.jpg" class="img-fluid rounded-4" alt="auction image"/>
+  </div> -->
+  <br>
+
+  <div class="container bg-white rounded-4 p-4">
+    <h2 class="text-center mb-5 fw-bold">Ongoing  Electronics Products Auctions</h2>
+
+    <div class="row g-4">
+      
+      <!-- Card 1: Gaming Laptop -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://cdn.thepcenthusiast.com/wp-content/uploads/2023/03/Asus-ROG-Gaming-Laptops-with-AMD-Ryzen-9-7945HX.jpg"
+               class="card-img-top img-fluid rounded-top" alt="Gaming Laptop" />
+          <div class="card-body">
+            <h5 class="card-title">Gaming Laptop</h5>
+            <p class="text-muted">High-performance laptop for gaming</p>
+            <h6 class="text-primary fw-bold">$1,250</h6>
+            <p class="time-left">5h 30m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Wireless Headphones -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://cdn.thewirecutter.com/wp-content/media/2023/07/bluetoothheadphones-2048px-0876.jpg"
+               class="card-img-top img-fluid rounded-top" alt="Wireless Headphones" />
+          <div class="card-body">
+            <h5 class="card-title">Wireless Headphones</h5>
+            <p class="text-muted">Premium noise-canceling headphones</p>
+            <h6 class="text-primary fw-bold">$1000</h6>
+            <p class="time-left">4h 15m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Luxury Watch -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://c.wallhere.com/photos/85/72/Luxury_watches_watch-1272833.jpg!d"
+               class="card-img-top img-fluid rounded-top" alt="Luxury Watch" />
+          <div class="card-body">
+            <h5 class="card-title">Luxury Watch</h5>
+            <p class="text-muted">Swiss-made automatic timepiece</p>
+            <h6 class="text-primary fw-bold">$2,100</h6>
+            <p class="time-left">1h 05m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ 
+  </div>
+  <br>
+   <div class="container bg-white rounded-4 p-4">
+    <h2 class="text-center mb-5 fw-bold">Ongoing Sport Products Auctions</h2>
+
+    <div class="row g-4">
+      
+      <!-- Card 1: Cricket bat -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://images.prodirectsport.com/productimages/Main/V3_1_Main_0227849.jpg"
+               class="card-img-top img-fluid rounded-top" alt="Cricket bat" />
+          <div class="card-body">
+            <h5 class="card-title">Cricket Bat</h5>
+            <p class="text-muted">Tennis bat for better shots</p>
+            <h6 class="text-primary fw-bold">$18,000</h6>
+            <p class="time-left">5h 30m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: volley ball -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://media.istockphoto.com/photos/volleyball-picture-id585290906?k=6&m=585290906&s=612x612&w=0&h=bJhLTIJ5UsokZseMNmcIDWTK9iYrYTunoPEQQjNJEN4="
+               class="card-img-top img-fluid rounded-top" alt="Volley ball" />
+          <div class="card-body">
+            <h5 class="card-title">Volley ball</h5>
+            <p class="text-muted">Premium weight less Cosco ball</p>
+            <h6 class="text-primary fw-bold">$800</h6>
+            <p class="time-left">4h 15m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Cricket Gloves -->
+      <div class="col-md-4">
+        <div class="card auction-card text-center">
+          <span class="badge bg-danger live-badge">Live</span>
+          <img src="https://prokicksports.com/cdn/shop/files/aaayyuya1.jpg?v=1687168111"
+               class="card-img-top img-fluid rounded-top" alt="Cricket Gloves" />
+          <div class="card-body">
+            <h5 class="card-title">Cricket Gloves</h5>
+            <p class="text-muted">Well switched Premium gloves</p>
+            <h6 class="text-primary fw-bold">$1,500</h6>
+            <p class="time-left">1h 05m left</p>
+            <button class="btn btn-gradient">Place Bid</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+   
+
+    
+<footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>AuctionHub</h5>
+                    <p>Your trusted platform for online auctions. Discover unique items and bid with confidence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">t</a>
+                        <a href="#" class="social-link">i</a>
+                        <a href="#" class="social-link">y</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">How to Bid</a></li>
+                        <li><a href="#">Seller's Guide</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                        <li><a href="#">Art & Collectibles</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="countdown.js"></script>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle 
