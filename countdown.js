@@ -6,7 +6,7 @@ function startMainCountdown() {
     if (!countdownEl) return;
     
     // Set 15 minutes 32 seconds from now
-    const endTime = Date.now() + (15 * 60 + 32) * 1000;
+    const endTime = Date.now() + (75 * 60 + 32) * 1000;
     
     setInterval(() => {
         const timeLeft = endTime - Date.now();
