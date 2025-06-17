@@ -20,6 +20,10 @@
             margin: 0 auto;
             padding: 2rem;
         }
+        .navbar-custom .container {
+    height: 5px;
+}
+
 
         /* Navbar Styles */
         .navbar-custom {
