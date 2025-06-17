@@ -1,10 +1,35 @@
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+      min-height: 100vh;
+      padding: 2rem 0;
+    }
+    .auction-card {
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .btn-gradient {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      color: white;
+      border-radius: 25px;
+      padding: 0.5rem 1.5rem;
+    }
+    .timer-text {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .live-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+       
 
         .navbar-custom {
             background: rgba(255, 255, 255, 0.95) !important;
@@ -139,14 +164,7 @@
             transform: translateY(-2px);
             color: white;
         }
-        /* Demo content */
-        .demo-content {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px - 200px);
-            padding: 2rem;
-            text-align: center;
-            color: white;
-        }
+       
 
         /* Custom navbar toggler */
         .navbar-toggler {
