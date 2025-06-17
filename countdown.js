@@ -1,4 +1,4 @@
-// Simple countdown.js for auction site
+git// Simple countdown.js for auction site
 
 // Main countdown timer
 function startMainCountdown() {
