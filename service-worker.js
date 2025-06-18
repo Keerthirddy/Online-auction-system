@@ -1,7 +1,6 @@
 const CACHE_NAME = "myportal";
 
 const urlsToCache = [
-  "/",
   "/index.html",
   "/live.html",
   "/categories.html",
