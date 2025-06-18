@@ -1,4 +1,4 @@
-const CACHE_NAME = "my-portal-v1";
+const CACHE_NAME = "myportal";
 
 const urlsToCache = [
   "/",
