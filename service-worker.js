@@ -14,7 +14,6 @@ const urlsToCache = [
   "/act.png"
 ];
 
-// INSTALL: Cache all static assets
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -24,7 +23,6 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// ACTIVATE: Delete old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) =>
@@ -38,7 +36,7 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// FETCH: Serve from cache first, fallback to network, then fallback to /index.html or offline message
+
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
@@ -48,19 +46,16 @@ self.addEventListener("fetch", (event) => {
 
       return fetch(event.request)
         .then((networkResponse) => {
-          // Cache dynamically fetched pages (e.g., with query strings)
           return caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, networkResponse.clone());
             return networkResponse;
           });
         })
         .catch(() => {
-          // If navigation, fallback to index.html
           if (event.request.mode === "navigate") {
             return caches.match("/index.html");
           }
 
-          // Fallback text response for other types (e.g. images, JS)
           return new Response("You're offline. Resource not cached.", {
             headers: { "Content-Type": "text/plain" },
           });
