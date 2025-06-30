@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './live-auction.component.html',
   styleUrls: ['./live-auction.component.css']
 })
-export class LiveAuctionComponent {
+export class LiveAuctionsComponent {
 
 }

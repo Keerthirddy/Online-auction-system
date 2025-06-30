@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +12,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { LiveAuctionComponent } from './components/live-auction/live-auction.component';
+import { LiveAuctionsComponent } from './components/live-auction/live-auction.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -20,13 +24,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CountdownComponent,
     FooterComponent,
     HomeComponent,
-    LiveAuctionComponent,
+    LiveAuctionsComponent,
     LoginComponent,
     NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
