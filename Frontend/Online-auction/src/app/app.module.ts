@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LiveAuctionsComponent } from './components/live-auction/live-auction.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CategoryCardComponent } from './components/category-card/category-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     LiveAuctionsComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    CategoryCardComponent
   ],
   imports: [
     BrowserModule,
