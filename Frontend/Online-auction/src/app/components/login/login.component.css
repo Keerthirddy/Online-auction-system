@@ -1,0 +1,15 @@
+.form-card {
+    max-width: 400px;
+    margin: 120px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .toggle-link {
+    color: #6a11cb;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
