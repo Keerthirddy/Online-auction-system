@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,13 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   showRegister: boolean = true;
 
-  registerData = {
+  registerData: User = {
     username: '',
     email: '',
     password: ''
   };
 
-  loginData = {
+  loginData: User = {
     username: '',
     email: '',
     password: ''
@@ -34,7 +35,7 @@ export class LoginComponent {
       return;
     }
 
-    if (this.registerData.password.length < 6) {
+    if (!this.registerData.password || this.registerData.password.length < 6) {
       alert('Password must be at least 6 characters.');
       return;
     }
@@ -50,7 +51,7 @@ export class LoginComponent {
       return;
     }
 
-    if (this.loginData.password.length < 6) {
+    if (!this.loginData.password || this.loginData.password.length < 6) {
       alert('Password must be at least 6 characters.');
       return;
     }
@@ -61,7 +62,7 @@ export class LoginComponent {
       return;
     }
 
-    const storedUser = JSON.parse(stored);
+    const storedUser: User = JSON.parse(stored);
     if (
       storedUser.username === this.loginData.username &&
       storedUser.email === this.loginData.email &&
@@ -69,7 +70,7 @@ export class LoginComponent {
     ) {
       localStorage.setItem('loggedInUser', this.loginData.username);
       if (confirm(`Welcome ${this.loginData.username}! Click OK to go to the homepage.`)) {
-        this.router.navigate(['/home']); // or replace with actual homepage route
+        this.router.navigate(['/home']);
       }
     } else {
       alert('Invalid login credentials.');
