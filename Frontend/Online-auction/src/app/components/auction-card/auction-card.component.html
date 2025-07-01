@@ -1,1 +1,20 @@
 <p>auction-card works!</p>
+<h2>Featured Auctions</h2>
+<section class="auction-grid">
+  <article *ngFor="let a of featured$ | async">
+    <img [src]="a.imageUrl" [alt]="a.title" />
+    <h3>{{ a.title }}</h3>
+    <small>{{ a.timeLeft }}</small>
+    <p>₹{{ a.currentBid }}</p>
+  </article>
+</section>
+
+<h2>Ongoing Auctions</h2>
+<section class="auction-grid">
+  <article *ngFor="let a of ongoing$ | async">
+    <img [src]="a.imageUrl" [alt]="a.title" />
+    <h3>{{ a.title }}</h3>
+    <small>{{ a.timeLeft }}</small>
+    <p>₹{{ a.currentBid }}</p>
+  </article>
+</section>

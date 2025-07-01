@@ -1,1 +1,19 @@
-<p>categories works!</p>
+<!-- ========== CATEGORY TILES ========== -->
+<section *ngIf="listMode === 'categories'" class="categories">
+  <article *ngFor="let c of categories$ | async" (click)="open(c)">
+    <span class="icon">{{ c.icon }}</span>
+    <h3>{{ c.name }}</h3>
+    <p>{{ c.description }}</p>
+  </article>
+</section>
+
+<!-- ========== PRODUCTS IN THAT CATEGORY ========== -->
+<section *ngIf="listMode === 'products'">
+  <h2>{{ pageTitle }}</h2>
+  <div class="auction-grid">
+    <app-auction-card
+      *ngFor="let a of products$ | async"
+      [auction]="a">
+    </app-auction-card>
+  </div>
+</section>
