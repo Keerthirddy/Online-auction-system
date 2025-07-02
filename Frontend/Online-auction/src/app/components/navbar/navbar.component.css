@@ -1,12 +1,12 @@
 .navbar-custom {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #667eea !important;
   text-decoration: none;
@@ -16,8 +16,11 @@
   color: #333 !important;
   font-weight: 500;
   position: relative;
-  margin-right: 1rem;
+  margin-right: 0.7rem;
+  font-size: 1.15rem;
   transition: color 0.3s ease;
+  padding: 0 1.2rem;
+  min-width: 110px;
 }
 
 .navbar-nav .nav-link:hover,
@@ -46,11 +49,11 @@
   color: #667eea;
   border: 2px solid #667eea;
   border-radius: 25px;
-  padding: 0.7rem 1.5rem;
+  padding: 0.4rem 1.1rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .btn-custom-secondary:hover {
@@ -91,5 +94,8 @@
   .navbar-nav .nav-link {
     margin-right: 0;
     margin-bottom: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    min-width: unset;
   }
 } 

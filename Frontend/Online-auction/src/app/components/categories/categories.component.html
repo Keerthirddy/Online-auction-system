@@ -59,10 +59,10 @@
 
         <div class="row g-4" *ngIf="categoryAuctions.length > 0">
           <div class="col-md-4" *ngFor="let auction of categoryAuctions">
-            <!-- <app-auction-card 
+            <app-auction-card 
               [auction]="auction" 
               [showLiveBadge]="auction.isLive ?? false">
-            </app-auction-card> -->
+            </app-auction-card>
           </div>
         </div>
       </div>

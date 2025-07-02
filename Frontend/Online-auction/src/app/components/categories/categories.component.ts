@@ -65,6 +65,8 @@ export class CategoriesComponent implements OnInit {
           queryParams: { category: categoryKey },
           queryParamsHandling: 'merge'
         });
+        // Scroll to top after navigation
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
       }
     });
   }

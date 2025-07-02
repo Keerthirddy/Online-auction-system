@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Auction } from '../../models/auction.model';
 
 @Component({
   selector: 'app-auction-card',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./auction-card.component.css']
 })
 export class AuctionCardComponent {
-
-}
+  @Input() auction!: Auction;
+  @Input() showLiveBadge: boolean = false;
+} 
