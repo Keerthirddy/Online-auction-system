@@ -4,9 +4,9 @@ import { Auction } from '../../models/auction.model';
 @Component({
   selector: 'app-auction-card',
   templateUrl: './auction-card.component.html',
-  styleUrls: ['./auction-card.component.css']
+  styleUrls: ['./auction-card.component.css'],
 })
 export class AuctionCardComponent {
   @Input() auction!: Auction;
   @Input() showLiveBadge: boolean = false;
-} 
+}
