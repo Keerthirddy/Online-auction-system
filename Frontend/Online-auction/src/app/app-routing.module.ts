@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { 
-    path: 'auction', 
+    path: 'live-auction', 
     loadChildren: () => import('./components/live-auction/live-auction.module').then(m => m.LiveAuctionModule)
   },
   { path: 'categories', component: CategoriesComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
