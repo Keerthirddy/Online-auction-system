@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { 
-    path: 'live-auction', 
+    path: 'live-auctions', 
     loadChildren: () => import('./components/live-auction/live-auction.module').then(m => m.LiveAuctionModule)
   },
   { path: 'categories', component: CategoriesComponent },
