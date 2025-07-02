@@ -6,6 +6,8 @@
     "watch": "tsc -w"
   },
   "dependencies": {
+    "@angular/forms": "^20.0.5",
+    "@angular/router": "^20.0.5",
     "typescript": "^5.8.3"
   },
   "devDependencies": {

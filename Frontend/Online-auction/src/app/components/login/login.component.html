@@ -1,0 +1,46 @@
+<div class="form-card" *ngIf="!showRegister">
+  <h4 class="mb-4 text-center">🔐 Login</h4>
+  <form #loginForm="ngForm" (ngSubmit)="onLoginSubmit(loginForm)">
+    <div class="mb-3">
+      <label for="loginUsername" class="form-label">Username</label>
+      <input type="text" id="loginUsername" name="username" [(ngModel)]="loginData.username" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="loginEmail" class="form-label">Email</label>
+      <input type="email" id="loginEmail" name="email" [(ngModel)]="loginData.email" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="loginPassword" class="form-label">Password</label>
+      <input type="password" id="loginPassword" name="password" [(ngModel)]="loginData.password" class="form-control" required minlength="6" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Login</button>
+  </form>
+  <div class="text-center toggle-link mt-2" (click)="toggleForm()">← Back to Register</div>
+</div>
+
+<!-- Registration form -->
+<div class="form-card" *ngIf="showRegister">
+  <h4 class="mb-4 text-center">📝 Register</h4>
+  <form #registerForm="ngForm" (ngSubmit)="onRegisterSubmit(registerForm)">
+    <div class="mb-3">
+      <label for="regUsername" class="form-label">Username</label>
+      <input type="text" id="regUsername" name="username" [(ngModel)]="registerData.username" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="regEmail" class="form-label">Email</label>
+      <input type="email" id="regEmail" name="email" [(ngModel)]="registerData.email" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="regPassword" class="form-label">Password</label>
+      <input type="password" id="regPassword" name="password" [(ngModel)]="registerData.password" class="form-control" required minlength="6" />
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Register</button>
+  </form>
+  <div class="text-center toggle-link mt-2" (click)="toggleForm()">Already registered? Login here →</div>
+</div>
