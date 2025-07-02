@@ -1,0 +1,52 @@
+.live-auctions-container {
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+    min-height: 100vh;
+    padding: 120px 0 2rem;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .no-auctions {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .no-auctions h3 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .no-auctions p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .page-subtitle {
+      font-size: 1rem;
+    }
+    
+    .no-auctions {
+      padding: 2rem;
+    }
+  } 

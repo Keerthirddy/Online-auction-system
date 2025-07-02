@@ -2,12 +2,20 @@ interface TimeElements extends NodeListOf<HTMLElement> {}
 
 // Helper function for zero-padding numbers
 function padTime(num: number): string {
+<<<<<<< HEAD
   return num.toString().padStart(2, "0");
+=======
+  return num.toString().padStart(2, '0');
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
 }
 
 function startMainCountdown(): void {
   const countdownEl = document.getElementById(
+<<<<<<< HEAD
     "countdown"
+=======
+    'countdown'
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
   ) as HTMLElement | null;
   if (!countdownEl) return;
 
@@ -17,7 +25,11 @@ function startMainCountdown(): void {
     const timeLeft = endTime - Date.now();
 
     if (timeLeft <= 0) {
+<<<<<<< HEAD
       countdownEl.textContent = "Auction Started!";
+=======
+      countdownEl.textContent = 'Auction Started!';
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
       return;
     }
 
@@ -32,10 +44,17 @@ function startMainCountdown(): void {
 }
 
 function startAuctionTimers(): void {
+<<<<<<< HEAD
   const timeElements = document.querySelectorAll(".time-left") as TimeElements;
 
   timeElements.forEach((el: HTMLElement): void => {
     const text = el.textContent || "";
+=======
+  const timeElements = document.querySelectorAll('.time-left') as TimeElements;
+
+  timeElements.forEach((el: HTMLElement): void => {
+    const text = el.textContent || '';
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
     let minutes = 0;
 
     const hours = text.match(/(\d+)h/);
@@ -50,8 +69,13 @@ function startAuctionTimers(): void {
       const timeLeft = endTime - Date.now();
 
       if (timeLeft <= 0) {
+<<<<<<< HEAD
         el.textContent = "Auction Ended";
         el.style.color = "#999";
+=======
+        el.textContent = 'Auction Ended';
+        el.style.color = '#999';
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
         clearInterval(timer);
         return;
       }
@@ -66,13 +90,21 @@ function startAuctionTimers(): void {
           : `${padTime(m)}m ${padTime(s)}s left`;
 
       if (timeLeft < 5 * 60 * 1000) {
+<<<<<<< HEAD
         el.style.color = "#dc3545";
+=======
+        el.style.color = '#dc3545';
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
       }
     }, 1000);
   });
 }
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", (): void => {
+=======
+document.addEventListener('DOMContentLoaded', (): void => {
+>>>>>>> 9b5dbd484bd88ec6ed49a8d8d15337028732114c
   startMainCountdown();
   startAuctionTimers();
 });

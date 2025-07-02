@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Electronics",
+      "icon": "💻",
+      "key": "electronics",
+      "description": "Discover amazing tech deals and electronic gadgets"
+    },
+    {
+      "id": 2,
+      "name": "Fashion",
+      "icon": "👕",
+      "key": "fashion",
+      "description": "Stylish clothing and accessories for every occasion"
+    },
+    {
+      "id": 3,
+      "name": "Home & Garden",
+      "icon": "🏠",
+      "key": "home-garden",
+      "description": "Beautiful items to enhance your living space"
+    },
+    {
+      "id": 4,
+      "name": "Sports",
+      "icon": "⚽",
+      "key": "sports",
+      "description": "Equipment and gear for all your sporting needs"
+    },
+    {
+      "id": 5,
+      "name": "Art & Collectibles",
+      "icon": "🎨",
+      "key": "art-collectibles",
+      "description": "Unique pieces and rare collectibles for enthusiasts"
+    },
+    {
+      "id": 6,
+      "name": "Automotive",
+      "icon": "🚗",
+      "key": "automotive",
+      "description": "Cars, bikes, and automotive accessories"
+    }
+  ] 

@@ -1,0 +1,341 @@
+{
+    "featuredAuctions": [
+      {
+        "id": 1,
+        "title": "Premium Smartwatch",
+        "description": "Latest digital watch with health features",
+        "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRpZ2l0YWwlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 245,
+        "timeLeft": "2h 15m left",
+        "category": "Electronics"
+      },
+      {
+        "id": 2,
+        "title": "Vintage Camera",
+        "description": "Classic film camera from the 1960s",
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1667538960104-25726d82a6e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmludGFnZSUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 180,
+        "timeLeft": "4h 45m left",
+        "category": "Electronics"
+      },
+      {
+        "id": 3,
+        "title": "Designer Lounge Chair",
+        "description": "Modern ergonomic chair with sleek design",
+        "imageUrl": "https://images.unsplash.com/photo-1417976528056-3c9bbbb5456c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZW9yY2h8MjB8fHZpbnRhZ2UlMjBsb3VuZ2UlMjBjaGFpcnxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 320,
+        "timeLeft": "3h 10m left",
+        "category": "Home & Garden"
+      },
+      {
+        "id": 4,
+        "title": "Classic Typewriter",
+        "description": "Retro mechanical typewriter in working condition",
+        "imageUrl": "https://images.unsplash.com/photo-1533140717783-6db98f7d7de6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHlwZSUyMHdyaXRlcnxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 110,
+        "timeLeft": "1h 50m left",
+        "category": "Art & Collectibles"
+      },
+      {
+        "id": 5,
+        "title": "Antique Pocket Watch",
+        "description": "19th-century pocket watch with golden chain",
+        "imageUrl": "https://media.istockphoto.com/id/1296682067/photo/pocket-watch.webp?a=1&b=1&s=612x612&w=0&k=20&c=OjZoUsYXGWSWq33pcQYYTTeUzY4lAax5dwtLctDkuNQ=",
+        "currentBid": 290,
+        "timeLeft": "5h 05m left",
+        "category": "Art & Collectibles"
+      },
+      {
+        "id": 6,
+        "title": "Nautical Brass Compass",
+        "description": "19th-century brass navigation compass",
+        "imageUrl": "https://images.unsplash.com/photo-1578902592469-890ca26340c7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJyYXNzJTIwY29tcGFzc3xlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 135,
+        "timeLeft": "6h 00m left",
+        "category": "Art & Collectibles"
+      }
+    ],
+    "ongoingAuctions": [
+      {
+        "id": 7,
+        "title": "Gaming Laptop",
+        "description": "High-performance laptop perfect for gamers",
+        "imageUrl": "https://media.istockphoto.com/id/505227671/photo/gamer-laptop-with-video-game.webp?a=1&b=1&s=612x612&w=0&k=20&c=BGQBUPQf4QOytLhvP_5tuyiXObEGiBcRJlej4Wq0U1s=",
+        "currentBid": 1250,
+        "timeLeft": "5h 30m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 8,
+        "title": "Wireless Headphones",
+        "description": "Noise-cancelling over-ear Bluetooth headphones",
+        "imageUrl": "https://images.unsplash.com/photo-1612858249937-1cc0852093dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2lyZWxlc3MlMjBoZWFkcGhvbmVzfGVufDB8fDB8fHww",
+        "currentBid": 180,
+        "timeLeft": "3h 10m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 9,
+        "title": "Retro Tin Toy Robot",
+        "description": "Vintage collectible toy robot in excellent condition",
+        "imageUrl": "https://images.unsplash.com/photo-1546776230-bb86256870ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmV0cm8lMjB0aW4lMjB0b3klMjByb2JvdHxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 85,
+        "timeLeft": "3h 20m left",
+        "category": "Art & Collectibles",
+        "isLive": true
+      },
+      {
+        "id": 10,
+        "title": "Polaroid Instant Camera",
+        "description": "Capture moments instantly with retro Polaroid",
+        "imageUrl": "https://images.unsplash.com/photo-1575998256834-2d841f0d7ede?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9sYXJvaWQlMjBpbnN0YW50JTIwY2FtZXJhfGVufDB8fDB8fHww",
+        "currentBid": 120,
+        "timeLeft": "6h 45m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 11,
+        "title": "Vintage Rotary Telephone",
+        "description": "Fully functional with authentic ringing sound",
+        "imageUrl": "https://images.unsplash.com/photo-1613265719175-fdbeebf5642d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvdGFyeSUyMHRlbGVwaG9uZXxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 72,
+        "timeLeft": "2h 55m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 12,
+        "title": "Wooden Book Stand",
+        "description": "Handmade adjustable stand made from teak wood",
+        "imageUrl": "https://images.unsplash.com/photo-1572025132336-eb2ea1df565f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdvb2RlbiUyMGJvb2slMjBzdGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "currentBid": 65,
+        "timeLeft": "4h 40m left",
+        "category": "Home & Garden",
+        "isLive": true
+      }
+    ],
+    "categoryProducts": {
+      "electronics": [
+        {
+          "id": 101,
+          "title": "Bluetooth Speaker",
+          "description": "Portable high-quality sound system",
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 85,
+          "timeLeft": "3h 15m left",
+          "category": "Electronics"
+        },
+        {
+          "id": 102,
+          "title": "Wi-Fi Router",
+          "description": "Dual-band high-speed router",
+          "imageUrl": "https://images.unsplash.com/photo-1606421753414-8d165c9d48e5?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 55,
+          "timeLeft": "1h 45m left",
+          "category": "Electronics"
+        },
+        {
+          "id": 103,
+          "title": "Smartphone",
+          "description": "Latest model with fast performance",
+          "imageUrl": "https://images.unsplash.com/photo-1596558450268-9c27524ba856?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 320,
+          "timeLeft": "4h 30m left",
+          "category": "Electronics"
+        },
+        {
+          "id": 104,
+          "title": "Gaming Laptop",
+          "description": "High-performance laptop for gaming",
+          "imageUrl": "https://cdn.thepcenthusiast.com/wp-content/uploads/2023/03/Asus-ROG-Gaming-Laptops-with-AMD-Ryzen-9-7945HX.jpg",
+          "currentBid": 1250,
+          "timeLeft": "5h 30m left",
+          "category": "Electronics"
+        },
+        {
+          "id": 105,
+          "title": "Wireless Headphones",
+          "description": "Premium noise-canceling headphones",
+          "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2023/07/bluetoothheadphones-2048px-0876.jpg",
+          "currentBid": 180,
+          "timeLeft": "3h 10m left",
+          "category": "Electronics"
+        },
+        {
+          "id": 106,
+          "title": "Luxury Watch",
+          "description": "Swiss-made automatic timepiece",
+          "imageUrl": "https://c.wallhere.com/photos/85/72/Luxury_watches_watch-1272833.jpg!d",
+          "currentBid": 2100,
+          "timeLeft": "6h 20m left",
+          "category": "Electronics"
+        }
+      ],
+      "fashion": [
+        {
+          "id": 201,
+          "title": "High Top Sneakers",
+          "description": "Trendy and comfortable sneakers",
+          "imageUrl": "https://images.unsplash.com/photo-1645846123684-f6f33a2eb3ec?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 90,
+          "timeLeft": "2h 30m left",
+          "category": "Fashion"
+        },
+        {
+          "id": 202,
+          "title": "Leather Handbag",
+          "description": "Elegant brown leather bag",
+          "imageUrl": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 120,
+          "timeLeft": "4h 15m left",
+          "category": "Fashion"
+        },
+        {
+          "id": 203,
+          "title": "Leather Jacket",
+          "description": "Classic black leather jacket",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcUYrsP7bHmmAld0qERknLXbk9hpa4Msipg&s",
+          "currentBid": 150,
+          "timeLeft": "1h 50m left",
+          "category": "Fashion"
+        }
+      ],
+      "home-garden": [
+        {
+          "id": 301,
+          "title": "Table Lamp",
+          "description": "Stylish table lamp",
+          "imageUrl": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 45,
+          "timeLeft": "3h 45m left",
+          "category": "Home & Garden"
+        },
+        {
+          "id": 302,
+          "title": "Living Room Sofa",
+          "description": "Comfortable living room sofa",
+          "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 400,
+          "timeLeft": "5h 20m left",
+          "category": "Home & Garden"
+        },
+        {
+          "id": 303,
+          "title": "Wall Clock",
+          "description": "Modern design wall clock",
+          "imageUrl": "https://images.unsplash.com/photo-1522339419089-3e2604cc8a9d?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 65,
+          "timeLeft": "2h 10m left",
+          "category": "Home & Garden"
+        }
+      ],
+      "sports": [
+        {
+          "id": 401,
+          "title": "Tennis Racket",
+          "description": "Professional-grade racket",
+          "imageUrl": "https://images.unsplash.com/photo-1617883861744-13b534e3b928?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 100,
+          "timeLeft": "4h 30m left",
+          "category": "Sports"
+        },
+        {
+          "id": 402,
+          "title": "Badminton Racket",
+          "description": "Lightweight and durable",
+          "imageUrl": "https://images.unsplash.com/photo-1721760886982-3c643f05813d?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 70,
+          "timeLeft": "3h 15m left",
+          "category": "Sports"
+        },
+        {
+          "id": 403,
+          "title": "Premium Volleyball",
+          "description": "Soft-touch pro ball",
+          "imageUrl": "https://images.unsplash.com/photo-1576181335863-436c807976f4?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 60,
+          "timeLeft": "1h 45m left",
+          "category": "Sports"
+        },
+        {
+          "id": 404,
+          "title": "Cricket Bat",
+          "description": "Professional cricket bat for better shots",
+          "imageUrl": "https://images.prodirectsport.com/productimages/Main/V3_1_Main_0227849.jpg",
+          "currentBid": 180,
+          "timeLeft": "6h 10m left",
+          "category": "Sports"
+        },
+        {
+          "id": 405,
+          "title": "Cricket Gloves",
+          "description": "Well stitched premium gloves",
+          "imageUrl": "https://prokicksports.com/cdn/shop/files/aaayyuya1.jpg?v=1687168111",
+          "currentBid": 150,
+          "timeLeft": "2h 30m left",
+          "category": "Sports"
+        }
+      ],
+      "art-collectibles": [
+        {
+          "id": 501,
+          "title": "Oil Painting",
+          "description": "Oil on canvas artwork",
+          "imageUrl": "https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 210,
+          "timeLeft": "4h 45m left",
+          "category": "Art & Collectibles"
+        },
+        {
+          "id": 502,
+          "title": "Classic Sculpture",
+          "description": "Marble figure sculpture",
+          "imageUrl": "https://plus.unsplash.com/premium_photo-1673126682754-163189925db7?q=80&w=1248&auto=format&fit=crop",
+          "currentBid": 300,
+          "timeLeft": "5h 30m left",
+          "category": "Art & Collectibles"
+        },
+        {
+          "id": 503,
+          "title": "Vintage Collectible",
+          "description": "Rare antique piece",
+          "imageUrl": "https://images.unsplash.com/photo-1560807668-b72e7ba36103?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 180,
+          "timeLeft": "3h 20m left",
+          "category": "Art & Collectibles"
+        }
+      ],
+      "automotive": [
+        {
+          "id": 601,
+          "title": "Sports Car",
+          "description": "Luxury red convertible",
+          "imageUrl": "https://plus.unsplash.com/premium_photo-1737559694560-1227c63d0885?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 9500,
+          "timeLeft": "8h 15m left",
+          "category": "Automotive"
+        },
+        {
+          "id": 602,
+          "title": "Royal Enfield",
+          "description": "Vintage classic bike",
+          "imageUrl": "https://images.unsplash.com/photo-1622185135505-2d795003994a?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 2200,
+          "timeLeft": "6h 45m left",
+          "category": "Automotive"
+        },
+        {
+          "id": 603,
+          "title": "Mahindra Thar",
+          "description": "Off-road SUV",
+          "imageUrl": "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?w=600&auto=format&fit=crop&q=60",
+          "currentBid": 7500,
+          "timeLeft": "7h 30m left",
+          "category": "Automotive"
+        }
+      ]
+    }
+  } 
