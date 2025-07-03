@@ -1,1 +1,34 @@
-<p>auction-card works!</p>
+<div class="auction-card">
+  <div class="auction-image">
+    <img [src]="auction.imageUrl" [alt]="auction.title" />
+    <div *ngIf="showLiveBadge && auction.isLive" class="live-badge">
+      <span class="badge bg-danger">LIVE</span>
+    </div>
+  </div>
+  <div class="auction-content">
+    <h3 class="auction-title">{{ auction.title }}</h3>
+    <p class="auction-description">{{ auction.description }}</p>
+    <div class="auction-details">
+      <span class="current-bid">${{ auction.currentBid }}</span>
+      <span class="time-left" *ngIf="!hideTimer">{{ countdown }}</span>
+    </div>
+
+    <a
+      *ngIf="auction.isLive"
+      [routerLink]="['/live-auctions/bids']"
+      [queryParams]="{ id: auction.id }"
+      class="btn btn-primary"
+      style="width: 100%"
+    >
+      Place Bid
+    </a>
+    <a
+      *ngIf="!auction.isLive"
+      href="#"
+      class="btn btn-primary"
+      style="width: 100%"
+    >
+      View Details
+    </a>
+  </div>
+</div>
