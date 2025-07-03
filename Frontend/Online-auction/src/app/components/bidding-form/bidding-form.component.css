@@ -1,0 +1,21 @@
+.bidding-form-container {
+    max-width: 400px;
+  margin: 100px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.auction-details {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.btn + .btn {
+  margin-left: 8px;
+}
+.text-danger {
+  font-size: 0.9em;
+}

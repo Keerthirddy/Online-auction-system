@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { SharedModule } from './shared/shared.module';
+import { BiddingFormComponent } from './components/bidding-form/bidding-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SharedModule } from './shared/shared.module';
     // Removed LiveAuctionsComponent
     LoginComponent,
     NavbarComponent,
-    CategoryCardComponent
+    CategoryCardComponent,
+    BiddingFormComponent
   ],
   imports: [
     BrowserModule,
