@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { LiveAuctionsComponent } from './live-auction.component';
 import { LiveAuctionRoutingModule } from './live-auction-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BiddingFormComponent } from '../bidding-form/bidding-form.component';
 
 @NgModule({
-  declarations: [LiveAuctionsComponent],
+  declarations: [LiveAuctionsComponent, BiddingFormComponent],
   imports: [
     CommonModule,
-    FormsModule,
     LiveAuctionRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class LiveAuctionModule { }

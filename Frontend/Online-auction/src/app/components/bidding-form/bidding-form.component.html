@@ -1,1 +1,53 @@
-<p>bidding-form works!</p>
+<div class="bidding-form-container" *ngIf="!loading && auction">
+  <h2>Place Your Bid</h2>
+  <div class="auction-details">
+    <h4>{{ auction.title }}</h4>
+    <img [src]="auction.imageUrl" [alt]="auction.title" style="max-width: 200px;">
+    <p>{{ auction.description }}</p>
+    <p><strong>Current Bid:</strong> ${{ auction.currentBid }}</p>
+    <p><strong>Category:</strong> {{ auction.category }}</p>
+  </div>
+  <form [formGroup]="bidForm" (ngSubmit)="submitBid()">
+    <div class="form-group">
+      <label for="bidderName">Your Name</label>
+      <input id="bidderName" class="form-control" formControlName="bidderName" placeholder="Enter your name">
+      <div *ngIf="bidderName?.touched && bidderName?.invalid" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="bidAmount">Bid Amount</label>
+      <input id="bidAmount" type="number" class="form-control" formControlName="bidAmount" placeholder="Enter your bid">
+      <div *ngIf="bidAmount?.touched && bidAmount?.invalid" class="text-danger">
+        <div *ngIf="bidAmount?.errors?.['required']">Bid amount is required.</div>
+        <div *ngIf="bidAmount?.errors?.['min']">Bid must be greater than ${{ auction.currentBid }}.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+      <div *ngIf="email?.touched && email?.invalid" class="text-danger">
+        <div *ngIf="email?.errors?.['required']">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">Enter a valid email address.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="contactNumber">Contact Number</label>
+      <input id="contactNumber" type="tel" class="form-control" formControlName="contactNumber" placeholder="Enter your contact number">
+      <div *ngIf="contactNumber?.touched && contactNumber?.invalid" class="text-danger">
+        <div *ngIf="contactNumber?.errors?.['required']">Contact number is required.</div>
+        <div *ngIf="contactNumber?.errors?.['pattern']">Enter a valid contact number (10-15 digits).</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="bidForm.invalid">Place Bid</button>
+    <button class="btn btn-secondary ml-2" type="button" (click)="cancel()">Cancel</button>
+  </form>
+</div>
+<div *ngIf="loading" class="text-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div *ngIf="!loading && error" class="alert alert-danger">
+  {{ error }}
+</div>
