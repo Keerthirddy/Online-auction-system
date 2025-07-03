@@ -13,8 +13,22 @@
       <span class="time-left" *ngIf="!hideTimer">{{ countdown }}</span>
     </div>
 
-    <a href="#" class="btn btn-primary" style="width: 100%">
-      {{ auction.isLive ? "Place Bid" : "View Details" }}
+    <a
+      *ngIf="auction.isLive"
+      [routerLink]="['/live-auctions/bids']"
+      [queryParams]="{ id: auction.id }"
+      class="btn btn-primary"
+      style="width: 100%"
+    >
+      Place Bid
+    </a>
+    <a
+      *ngIf="!auction.isLive"
+      href="#"
+      class="btn btn-primary"
+      style="width: 100%"
+    >
+      View Details
     </a>
   </div>
 </div>

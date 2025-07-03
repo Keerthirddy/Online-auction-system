@@ -59,8 +59,8 @@ export class BiddingFormComponent implements OnInit {
       return;
     }
     // Here you would send the bid to the backend or update state
-    // alert(Bid placed: $${this.bidAmount?.value} by ${this.bidderName?.value}\nEmail: ${this.email?.value}\nContact: ${this.contactNumber?.value});
-    //this.router.navigate(['/live-auctions']);
+    alert(`Bid placed: $${this.bidAmount?.value} by ${this.bidderName?.value}\nEmail: ${this.email?.value}\nContact: ${this.contactNumber?.value}`);
+    this.router.navigate(['/live-auctions']);
   }
 
   public cancel(): void {
