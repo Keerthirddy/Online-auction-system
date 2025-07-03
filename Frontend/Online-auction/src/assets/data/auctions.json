@@ -115,6 +115,106 @@
         "timeLeft": "4h 40m left",
         "category": "Home & Garden",
         "isLive": true
+      },
+      {
+        "id": 13,
+        "title": "Electric Guitar",
+        "description": "Classic electric guitar for rock enthusiasts",
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 350,
+        "timeLeft": "2h 20m left",
+        "category": "Art & Collectibles",
+        "isLive": true
+      },
+      {
+        "id": 14,
+        "title": "Mountain Bike",
+        "description": "Durable mountain bike for all terrains",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 600,
+        "timeLeft": "4h 10m left",
+        "category": "Sports",
+        "isLive": true
+      },
+      {
+        "id": 15,
+        "title": "Artisan Coffee Maker",
+        "description": "Brew barista-quality coffee at home",
+        "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 120,
+        "timeLeft": "3h 55m left",
+        "category": "Home & Garden",
+        "isLive": true
+      },
+      {
+        "id": 16,
+        "title": "Designer Handbag",
+        "description": "Luxury designer handbag, limited edition",
+        "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 950,
+        "timeLeft": "5h 25m left",
+        "category": "Fashion",
+        "isLive": true
+      },
+      {
+        "id": 17,
+        "title": "Smart Home Speaker",
+        "description": "Voice-controlled smart speaker",
+        "imageUrl": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 80,
+        "timeLeft": "1h 40m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 18,
+        "title": "Fitness Tracker",
+        "description": "Track your health and activity",
+        "imageUrl": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 60,
+        "timeLeft": "2h 50m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 19,
+        "title": "Antique Globe",
+        "description": "Vintage world globe, collectible",
+        "imageUrl": "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 210,
+        "timeLeft": "3h 30m left",
+        "category": "Art & Collectibles",
+        "isLive": true
+      },
+      {
+        "id": 20,
+        "title": "Professional DSLR Camera",
+        "description": "Capture stunning photos with this DSLR",
+        "imageUrl": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 800,
+        "timeLeft": "4h 50m left",
+        "category": "Electronics",
+        "isLive": true
+      },
+      {
+        "id": 21,
+        "title": "Luxury Perfume Set",
+        "description": "Exclusive collection of luxury perfumes",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 300,
+        "timeLeft": "2h 35m left",
+        "category": "Fashion",
+        "isLive": true
+      },
+      {
+        "id": 22,
+        "title": "Rare Comic Book",
+        "description": "First edition, highly collectible",
+        "imageUrl": "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&auto=format&fit=crop&q=60",
+        "currentBid": 500,
+        "timeLeft": "5h 10m left",
+        "category": "Art & Collectibles",
+        "isLive": true
       }
     ],
     "categoryProducts": {

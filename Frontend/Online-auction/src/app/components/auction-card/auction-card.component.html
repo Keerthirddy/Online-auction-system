@@ -10,7 +10,7 @@
     <p class="auction-description">{{ auction.description }}</p>
     <div class="auction-details">
       <span class="current-bid">${{ auction.currentBid }}</span>
-      <span class="time-left">{{ countdown }}</span>
+      <span class="time-left" *ngIf="!hideTimer">{{ countdown }}</span>
     </div>
 
     <a href="#" class="btn btn-primary" style="width: 100%">
