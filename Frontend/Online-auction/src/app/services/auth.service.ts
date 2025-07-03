@@ -12,7 +12,18 @@ export class AuthService {
     // Check if user is already logged in from localStorage
     const loggedInUser = localStorage.getItem('loggedInUser');
     if (loggedInUser) {
-      this.currentUser = { username: loggedInUser, email: '' };
+      // Try to get the full user object if available
+      const registeredUser = localStorage.getItem('registeredUser');
+      if (registeredUser) {
+        const userObj = JSON.parse(registeredUser);
+        if (userObj.username === loggedInUser) {
+          this.currentUser = userObj;
+        } else {
+          this.currentUser = { username: loggedInUser, email: '' };
+        }
+      } else {
+        this.currentUser = { username: loggedInUser, email: '' };
+      }
     }
   }
 
@@ -27,12 +38,15 @@ export class AuthService {
     // For now, we'll just simulate success
     this.currentUser = user;
     localStorage.setItem('loggedInUser', user.username);
+    // Also store the full user object for later retrieval
+    localStorage.setItem('registeredUser', JSON.stringify(user));
     return of(true);
   }
 
   logout(): void {
     this.currentUser = null;
     localStorage.removeItem('loggedInUser');
+    // Optionally, do not remove registeredUser so user can log in again
   }
 
   getCurrentUser(): User | null {
