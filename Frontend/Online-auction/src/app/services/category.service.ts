@@ -1,30 +1,24 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 import { Category } from '../models/category.model';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
+  private http = inject(HttpClient);
   private dataUrl = 'assets/data/categories.json';
 
-  constructor(private http: HttpClient) { }
-
   getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.dataUrl);
-  }
-
-  getCategoryById(id: number): Observable<Category | undefined> {
-    return this.http.get<Category[]>(this.dataUrl).pipe(
-      map(categories => categories.find(category => category.id === id))
+    return this.http.get<{ categories: Category[] }>(this.dataUrl).pipe(
+      map(data => data.categories || [])
     );
   }
 
   getCategoryByKey(key: string): Observable<Category | undefined> {
-    return this.http.get<Category[]>(this.dataUrl).pipe(
-      map(categories => categories.find(category => category.key === key))
+    return this.getCategories().pipe(
+      map(categories => categories.find((cat: Category) => cat.key === key))
     );
   }
-} 
+}
