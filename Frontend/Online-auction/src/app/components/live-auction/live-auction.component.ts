@@ -17,6 +17,9 @@ export class LiveAuctionsComponent implements OnInit {
   ngOnInit(): void {
     this.loadLiveAuctions();
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   private loadLiveAuctions(): void {
     this.auctionService.getLiveAuctions().subscribe({
