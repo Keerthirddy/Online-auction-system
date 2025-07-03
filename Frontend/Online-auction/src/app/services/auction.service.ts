@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -9,8 +9,7 @@ import { Auction } from '../models/auction.model';
 })
 export class AuctionService {
   private dataUrl = 'assets/data/auctions.json';
-
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
   getFeaturedAuctions(): Observable<Auction[]> {
     return this.http.get<any>(this.dataUrl).pipe(
