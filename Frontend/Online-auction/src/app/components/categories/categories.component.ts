@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuctionService } from '../../services/auction.service';
 import { CategoryService } from '../../services/category.service';
@@ -18,12 +18,11 @@ export class CategoriesComponent implements OnInit {
   loading = true;
   showCategoriesOverview = true;
 
-  constructor(
-    private categoryService: CategoryService,
-    private auctionService: AuctionService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) { }
+  categoryService = inject(CategoryService);
+  auctionService = inject(AuctionService);
+  route = inject(ActivatedRoute);
+  router = inject(Router);
+
 
   ngOnInit(): void {
     this.loadCategories();

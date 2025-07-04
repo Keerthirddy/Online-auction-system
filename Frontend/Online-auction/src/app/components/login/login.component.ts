@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../models/user.model';
@@ -9,7 +9,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  showRegister: boolean = true;
+  showRegister = true;
 
   registerData: User = {
     username: '',
@@ -23,13 +23,13 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private router: Router) {}
+  private router = inject(Router);
 
-  toggleForm() {
+  toggleForm(): void {
     this.showRegister = !this.showRegister;
   }
 
-  onRegisterSubmit(form: NgForm) {
+  onRegisterSubmit(form: NgForm): void {
     if (form.invalid) {
       alert('Please fill out all registration fields.');
       return;
@@ -45,7 +45,7 @@ export class LoginComponent {
     this.toggleForm();
   }
 
-  onLoginSubmit(form: NgForm) {
+  onLoginSubmit(form: NgForm): void {
     if (form.invalid) {
       alert('Please fill out all login fields.');
       return;
