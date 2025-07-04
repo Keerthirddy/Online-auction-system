@@ -1,21 +1,15 @@
 <div class="container main-content">
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+  <div class="image-container">
+    <img src="https://www.cyblance.com/portfolio/wp-content/uploads/2024/12/wide-blog.png" alt="Auction Image" />
+    <div class="hero-text">
       <h1>Discover Amazing Auctions</h1>
-      <p>Bid on unique items, discover treasures, and win incredible deals</p>
-      <!-- Search Bar -->
-      <div class="search-container">
-        <input 
-          type="text" 
-          class="search-input" 
-          placeholder="Search for items, brands, or categories..."
-          [(ngModel)]="searchQuery"
-          (keyup.enter)="onSearch()">
-        <button class="search-btn" (click)="onSearch()">🔍</button>
-      </div>
+      <p>Bid on unique items, find treasures, and win big!</p>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Live Auction Countdown -->
   <app-countdown></app-countdown>

@@ -14,7 +14,6 @@ export class LiveAuctionsComponent implements OnInit {
   searchTerm: string = '';
 
   constructor(private auctionService: AuctionService) { }
-
   ngOnInit(): void {
     this.loadLiveAuctions();
   }

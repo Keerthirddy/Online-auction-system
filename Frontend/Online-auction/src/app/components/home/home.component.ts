@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuctionService } from '../../services/auction.service';
 import { CategoryService } from '../../services/category.service';
@@ -10,7 +10,7 @@ import { Category } from '../../models/category.model';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   featuredAuctions: Auction[] = [];
   ongoingAuctions: Auction[] = [];
   categories: Category[] = [];
@@ -21,7 +21,9 @@ export class HomeComponent {
   private categoryService = inject(CategoryService);
   private router = inject(Router);
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.loadFeaturedAuctions();
     this.loadOngoingAuctions();
     this.loadCategories();

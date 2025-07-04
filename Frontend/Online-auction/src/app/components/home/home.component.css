@@ -1,60 +1,56 @@
+/* General Layout */
 .main-content {
   padding-top: 100px;
   min-height: 100vh;
 }
 
+/* Hero Section with Image and Text Overlay */
 .hero {
-  text-align: center;
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  width: 100%;
+  height: 300px;
+  background-color: #f4f4f4;
+  margin: 2rem 0;
   border-radius: 15px;
-  margin-bottom: 3rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.search-container {
-  display: flex;
-  max-width: 500px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 50px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.search-input {
-  flex: 1;
-  border: none;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  outline: none;
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.search-btn {
-  background: #667eea;
-  border: none;
-  padding: 1rem 1.5rem;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
 }
 
-.search-btn:hover {
-  background: #5a6fd8;
+/* Just Text Overlay (No box) */
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: rgb(8, 0, 0);
+  z-index: 2;
+  text-align: left;
 }
 
+.hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+}
+
+/* Section Spacing */
 .section {
   margin: 4rem 0;
 }
@@ -92,29 +88,41 @@
   justify-content: center;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  .hero {
+    height: 220px;
   }
-  
-  .hero p {
-    font-size: 1rem;
+
+  .hero-text {
+    top: 55%;
+    left: 5%;
+    transform: translateY(-55%);
   }
-  
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .auction-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
+
   .category-card {
     min-height: 140px;
     max-width: 100%;
   }
-} 
+}
