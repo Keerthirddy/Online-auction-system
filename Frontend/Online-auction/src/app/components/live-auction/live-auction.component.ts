@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuctionService } from '../../services/auction.service';
 import { Auction } from '../../models/auction.model';
 
@@ -11,11 +11,11 @@ export class LiveAuctionsComponent implements OnInit {
   liveAuctions: Auction[] = [];
   allLiveAuctions: Auction[] = [];
   loading = true;
-  searchTerm = '';
+  searchTerm: string = '';
 
-  private auctionService = inject(AuctionService);
+  constructor(private auctionService: AuctionService) { }
 
-  constructor() {
+  ngOnInit(): void {
     this.loadLiveAuctions();
   }
 

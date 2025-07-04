@@ -1,17 +1,12 @@
 type TimeElements = NodeListOf<HTMLElement>;
 
-
 // Helper function for zero-padding numbers
 function padTime(num: number): string {
-
   return num.toString().padStart(2, '0');
-
 }
 
 function startMainCountdown(): void {
-  const countdownEl = document.getElementById(
-    'countdown'
-  ) as HTMLElement | null;
+  const countdownEl = document.getElementById('countdown') as HTMLElement | null;
   if (!countdownEl) return;
 
   const endTime = Date.now() + (75 * 60 + 32) * 1000;
@@ -28,9 +23,7 @@ function startMainCountdown(): void {
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    countdownEl.textContent = `${padTime(hours)}:${padTime(minutes)}:${padTime(
-      seconds
-    )}`;
+    countdownEl.textContent = `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`;
   }, 1000);
 }
 
