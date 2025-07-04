@@ -9,7 +9,9 @@ import { Auction } from '../../models/auction.model';
 })
 export class LiveAuctionsComponent implements OnInit {
   liveAuctions: Auction[] = [];
+  allLiveAuctions: Auction[] = [];
   loading = true;
+  searchTerm: string = '';
 
   constructor(private auctionService: AuctionService) { }
 
@@ -20,6 +22,7 @@ export class LiveAuctionsComponent implements OnInit {
   private loadLiveAuctions(): void {
     this.auctionService.getLiveAuctions().subscribe({
       next: (auctions) => {
+        this.allLiveAuctions = auctions;
         this.liveAuctions = auctions;
         this.loading = false;
       },
@@ -28,5 +31,21 @@ export class LiveAuctionsComponent implements OnInit {
         this.loading = false;
       }
     });
+  }
+
+  onSearch(): void {
+    const term = this.searchTerm.trim().toLowerCase();
+    if (!term) {
+      this.liveAuctions = this.allLiveAuctions;
+      return;
+    }
+    this.liveAuctions = this.allLiveAuctions.filter(auction =>
+      auction.title.toLowerCase().includes(term)
+    );
+  }
+
+  onClearSearch(): void {
+    this.searchTerm = '';
+    this.liveAuctions = this.allLiveAuctions;
   }
 } 

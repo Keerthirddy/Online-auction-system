@@ -12,6 +12,7 @@ describe('CategoryCardComponent', () => {
     });
     fixture = TestBed.createComponent(CategoryCardComponent);
     component = fixture.componentInstance;
+    component.category = { icon: 'test-icon', name: 'Test', id: 1, key: 'test-key' };
     fixture.detectChanges();
   });
 
