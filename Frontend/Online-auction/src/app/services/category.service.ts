@@ -11,9 +11,7 @@ export class CategoryService {
   private dataUrl = 'assets/data/categories.json';
 
   getCategories(): Observable<Category[]> {
-    return this.http.get<{ categories: Category[] }>(this.dataUrl).pipe(
-      map(data => data.categories || [])
-    );
+    return this.http.get<Category[]>(this.dataUrl);
   }
 
   getCategoryByKey(key: string): Observable<Category | undefined> {

@@ -15,7 +15,9 @@ export class LiveAuctionsComponent implements OnInit {
 
   private auctionService = inject(AuctionService);
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.loadLiveAuctions();
   }
 
