@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   private categoryService = inject(CategoryService);
   private router = inject(Router);
 
-  constructor() {}
+  
 
   ngOnInit(): void {
     this.loadFeaturedAuctions();

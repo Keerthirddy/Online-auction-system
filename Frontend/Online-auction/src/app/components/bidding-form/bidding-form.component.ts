@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuctionService } from '../../services/auction.service';
 import { Auction } from '../../models/auction.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-bidding-form',
@@ -13,14 +14,14 @@ export class BiddingFormComponent implements OnInit {
   bidForm!: FormGroup;
   auction: Auction | null = null;
   loading = true;
-  error: string = '';
+  error = '';
 
-  constructor(
-    private fb: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private auctionService: AuctionService
-  ) {}
+  private auctionService = inject(AuctionService);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private authService = inject(AuthService);
+  private fb = inject(FormBuilder);
+
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {

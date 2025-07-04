@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AuctionService } from '../../services/auction.service';
 import { Auction } from '../../models/auction.model';
 
@@ -11,14 +11,12 @@ export class LiveAuctionsComponent implements OnInit {
   liveAuctions: Auction[] = [];
   allLiveAuctions: Auction[] = [];
   loading = true;
-  searchTerm: string = '';
+  searchTerm = '';
 
-  constructor(private auctionService: AuctionService) { }
+  private auctionService = inject(AuctionService);
+
   ngOnInit(): void {
     this.loadLiveAuctions();
-  }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   private loadLiveAuctions(): void {
