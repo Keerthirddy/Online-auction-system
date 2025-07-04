@@ -1,27 +1,108 @@
-# OnlineAuction
+# BidNow – Online Auction System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+BidNow is a real-time auction platform where users can register, bid on listed items, and manage their own listings. Administrators can manage users, auction listings, and monitor platform metrics. This project was developed using Angular and follows an Agile-based sprint methodology.
 
-## Development server
+## Project Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Framework:** Angular 16  
+- **Styling:** HTML5, CSS3, Bootstrap 5  
+- **Scripting:** JavaScript, TypeScript  
+- **Architecture:** SPA (Single Page Application), PWA (Progressive Web App)  
+- **Tools:** Git, Yarn, Webpack, ESLint, Karma  
 
-## Code scaffolding
+## Sprint-wise Progress
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Sprint 1: UI Foundation and Version Control
 
-## Build
+**Objective:** Build the basic UI structure, responsive layout, and configure version control and team collaboration.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Tasks Completed:**
+- GitHub repository setup and Agile board initialization
+- Designed homepage layout with featured auctions and categories
+- Developed user registration and login forms with validations
+- Built static "Live Auctions" page using HTML and Bootstrap
+- Created navigation bar and footer with login/register links
+- Added a countdown timer for live auctions using JavaScript
 
-## Running unit tests
+**Deliverables:**
+- Static, responsive homepage and auctions page
+- Working countdown timer
+- GitHub project with organized team commits and Agile tracking
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Sprint 2: Interactivity, SPA Architecture, API Integration
 
-## Running end-to-end tests
+**Objective:** Transition from static UI to a fully functional SPA and fetch dynamic data from a mock API.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Tasks Completed:**
+- Converted UI logic to TypeScript with interfaces (Auction, User, Bid)
+- Fetched mock data from JSON and rendered auctions dynamically
+- Implemented search functionality and category filters
+- Configured Angular routing for pages like Auctions, My Bids, Dashboard, Contact
+- Enabled lazy loading for auction details
+- Converted the project into a PWA with offline support
 
-## Further help
+**Deliverables:**
+- Functional SPA with routing and lazy loading
+- Dynamic data rendering
+- Offline-capable PWA
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Sprint 3: Componentization, Testing, and Code Quality
+
+**Objective:** Refactor code into reusable components, set up testing, linting, and optimize build configuration.
+
+**Tasks Completed:**
+- Developed reusable Auction Card component with bid button
+- Created bidding form using Angular reactive forms
+- Configured ESLint and enforced consistent code style across the project
+- Added unit tests for components using Karma
+- Configured Webpack for optimized builds
+- Managed packages with Yarn and updated project documentation (README)
+
+**Deliverables:**
+- Modular component-based UI
+- Linting and test coverage
+- Optimized production build
+- Yarn-managed dependencies
+
+## Project Setup
+
+### Prerequisites
+- Node.js (v16 or above)
+- Angular CLI (`npm install -g @angular/cli`)
+- Yarn (`npm install -g yarn`)
+
+### Installation
+
+Clone the repository and install dependencies:
+
+`git clone https://github.com/Keerthirddy/Online-auction-system.git`
+
+`cd Online-auction-portal`
+
+`yarn install`
+
+### Development Server 
+
+To start the development server, run: 
+
+`ng serve`
+
+Then visit: http://localhost:4200
+
+To build the project for production:
+
+`ng build --configuration production`
+
+### Progressive Web App (PWA) 
+
+BidNow is a PWA-enabled application. After building for production, you can serve it offline using a static server like http-server.
+
+Install it globally (if not already):
+
+`npm install -g http-server`
+
+Then serve your build:
+
+`http-server dist/online-auction-system`
+
+Visit: http://localhost:8080 in your browser.
