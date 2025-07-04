@@ -1,6 +1,11 @@
-<div class="category-card" (click)="onClick()">
+<div
+  class="category-card"
+  (click)="onClick()"
+  tabindex="0"
+  (keydown.enter)="onClick()"
+  (keydown.space)="onClick()">
   <div class="icon-container">
-    <span class="category-icon">{{ category.icon || '📦' }}</span>
+    <span class="category-icon">{{ category.icon || '\ud83d\udce6' }}</span>
   </div>
   <div class="category-name">{{ category.name }}</div>
 </div> 

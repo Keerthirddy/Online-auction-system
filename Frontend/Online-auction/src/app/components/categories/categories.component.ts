@@ -4,7 +4,6 @@ import { AuctionService } from '../../services/auction.service';
 import { CategoryService } from '../../services/category.service';
 import { Auction } from '../../models/auction.model';
 import { Category } from '../../models/category.model';
-import { CategoryCardComponent } from '../category-card/category-card.component';
 
 @Component({
   selector: 'app-categories',

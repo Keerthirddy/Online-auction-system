@@ -8,22 +8,22 @@ import { Auction } from '../../models/auction.model';
 })
 export class AuctionCardComponent implements OnInit, OnDestroy {
   @Input() auction!: Auction;
-  @Input() showLiveBadge: boolean = false;
-  @Input() hideTimer: boolean = false;
+  @Input() showLiveBadge = false;
+  @Input() hideTimer = false;
 
-  countdown: string = '';
-  private interval: any;
-  private secondsLeft: number = 0;
+  countdown = '';
+  private interval: number | undefined = undefined;
+  private secondsLeft = 0;
 
   ngOnInit(): void {
     if (!this.hideTimer) {
       this.secondsLeft = this.parseTimeLeftToSeconds(this.auction.timeLeft);
       this.updateCountdown();
       if (this.secondsLeft > 0) {
-        this.interval = setInterval(() => {
+        this.interval = window.setInterval(() => {
           this.secondsLeft--;
           this.updateCountdown();
-          if (this.secondsLeft <= 0) {
+          if (this.secondsLeft <= 0 && this.interval !== undefined) {
             clearInterval(this.interval);
           }
         }, 1000);
@@ -32,7 +32,7 @@ export class AuctionCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.interval) {
+    if (this.interval !== undefined) {
       clearInterval(this.interval);
     }
   }

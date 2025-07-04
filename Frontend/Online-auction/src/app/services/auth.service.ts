@@ -27,7 +27,7 @@ export class AuthService {
     }
   }
 
-  register(user: User): Observable<boolean> {
+  register(): Observable<boolean> {
     // In a real app, this would make an API call
     // For now, we'll just simulate success
     return of(true);
@@ -55,5 +55,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return this.currentUser !== null;
+  }
+
+  someMethod() {
+    // ...
   }
 } 

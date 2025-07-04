@@ -6,11 +6,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./countdown.component.css']
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  countdown: string = '00:15:32';
-  private interval: any;
+  countdown = '00:15:32';
+  private interval: number | undefined;
 
   ngOnInit(): void {
     this.startCountdown();
+    if (this.interval !== undefined) {
+      clearInterval(this.interval);
+    }
   }
 
   ngOnDestroy(): void {

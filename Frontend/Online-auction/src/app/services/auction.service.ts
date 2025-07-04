@@ -1,8 +1,14 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Auction } from '../models/auction.model';
+
+interface AuctionData {
+  featuredAuctions?: Auction[];
+  ongoingAuctions?: Auction[];
+  categoryProducts?: Record<string, Auction[]>;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +18,13 @@ export class AuctionService {
   private http = inject(HttpClient);
 
   getFeaturedAuctions(): Observable<Auction[]> {
-    return this.http.get<any>(this.dataUrl).pipe(
+    return this.http.get<AuctionData>(this.dataUrl).pipe(
       map(data => data.featuredAuctions || [])
     );
   }
 
   getOngoingAuctions(): Observable<Auction[]> {
-    return this.http.get<any>(this.dataUrl).pipe(
+    return this.http.get<AuctionData>(this.dataUrl).pipe(
       map(data => data.ongoingAuctions || [])
     );
   }
@@ -30,25 +36,25 @@ export class AuctionService {
   }
 
   getAuctionsByCategory(category: string): Observable<Auction[]> {
-    return this.http.get<any>(this.dataUrl).pipe(
+    return this.http.get<AuctionData>(this.dataUrl).pipe(
       map(data => {
         const allAuctions = [...(data.featuredAuctions || []), ...(data.ongoingAuctions || [])];
-        return allAuctions.filter(auction => auction.category === category);
+        return allAuctions.filter((auction: Auction) => auction.category === category);
       })
     );
   }
 
   getCategoryProducts(categoryKey: string): Observable<Auction[]> {
-    return this.http.get<any>(this.dataUrl).pipe(
+    return this.http.get<AuctionData>(this.dataUrl).pipe(
       map(data => data.categoryProducts?.[categoryKey] || [])
     );
   }
 
   getAuctionById(id: number): Observable<Auction | undefined> {
-    return this.http.get<any>(this.dataUrl).pipe(
+    return this.http.get<AuctionData>(this.dataUrl).pipe(
       map(data => {
         const allAuctions = [...(data.featuredAuctions || []), ...(data.ongoingAuctions || [])];
-        return allAuctions.find(auction => auction.id === id);
+        return allAuctions.find((auction: Auction) => auction.id === id);
       })
     );
   }

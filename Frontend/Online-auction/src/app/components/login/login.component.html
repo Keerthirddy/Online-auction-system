@@ -16,9 +16,11 @@
       <input type="password" id="loginPassword" name="password" [(ngModel)]="loginData.password" class="form-control" required minlength="6" />
     </div>
 
-    <button type="submit" class="btn btn-primary w-100">Login</button>
+    <button type="submit" class="btn btn-primary w-100" tabindex="0" (keydown.enter)="onLoginSubmit(loginForm)" (keydown.space)="onLoginSubmit(loginForm)">Login</button>
   </form>
-  <div class="text-center toggle-link mt-2" (click)="toggleForm()">← Back to Register</div>
+  <div class="text-center toggle-link mt-2" (click)="toggleForm()" tabindex="0" (keydown.enter)="toggleForm()" (keydown.space)="toggleForm()">
+    ← Back to Register
+  </div>
 </div>
 
 <!-- Registration form -->
@@ -42,5 +44,5 @@
 
     <button type="submit" class="btn btn-success w-100">Register</button>
   </form>
-  <div class="text-center toggle-link mt-2" (click)="toggleForm()">Already registered? Login here →</div>
+  <div class="text-center toggle-link mt-2" (click)="toggleForm()" tabindex="0" (keydown.enter)="toggleForm()" (keydown.space)="toggleForm()">Already registered? Login here →</div>
 </div>
